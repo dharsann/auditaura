@@ -1,0 +1,127 @@
+[
+  {
+    "check": "https_enabled",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "security_headers",
+    "status": "fail",
+    "issue": "Missing headers: ['Content-Security-Policy', 'Strict-Transport-Security', 'X-Frame-Options', 'X-Content-Type-Options']"
+  },
+  {
+    "check": "cookie_security",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "server_version_disclosure",
+    "status": "warning",
+    "issue": "Server header exposed: AmazonS3"
+  },
+  {
+    "check": "http_methods_exposed",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "authentication_protection",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "admin_endpoint_exposure",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "debug_endpoint",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "password_policy",
+    "status": "warning",
+    "issue": "Password policy endpoints not detected"
+  },
+  {
+    "check": "api_security",
+    "status": "warning",
+    "issue": "Sensitive APIs detected: ['https://tenant-admin-fe.dev.app.pentesitesai.com//', 'https://tenant-admin-fe.dev.app.pentesitesai.com/assets/index-BGJO4iyQ.js', 'https://tenant-admin-fe.dev.app.pentesitesai.com/assets/index-DoSd-J-0.css', 'https://tenant-admin-fe.dev.app.pentesitesai.com/vite.svg', 'https://tenant-admin-be.dev.api.pentesitesai.com/api/auth/me']"
+  },
+  {
+    "check": "privileged_api_detection",
+    "status": "warning",
+    "issue": "Privileged APIs detected: ['https://tenant-admin-fe.dev.app.pentesitesai.com//', 'https://tenant-admin-fe.dev.app.pentesitesai.com/assets/index-BGJO4iyQ.js', 'https://tenant-admin-fe.dev.app.pentesitesai.com/assets/index-DoSd-J-0.css', 'https://tenant-admin-fe.dev.app.pentesitesai.com/vite.svg', 'https://tenant-admin-be.dev.api.pentesitesai.com/api/auth/me']"
+  },
+  {
+    "check": "api_docs_exposure",
+    "status": "warning",
+    "issue": "API documentation exposed: ['/swagger', '/docs', '/openapi.json']"
+  },
+  {
+    "check": "sensitive_data_exposure",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "sensitive_files",
+    "status": "fail",
+    "issue": "Sensitive files exposed: ['.env', 'config.json', 'backup.sql']"
+  },
+  {
+    "check": "error_leakage",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "session_timeout",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "cors_misconfiguration",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "rate_limiting",
+    "status": "warning",
+    "issue": "Rate limiting not detected"
+  },
+  {
+    "check": "open_redirect",
+    "status": "fail",
+    "issue": "Open redirect detected"
+  },
+  {
+    "check": "directory_listing",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "logging_detection",
+    "status": "warning",
+    "issue": "No logging endpoints detected"
+  },
+  {
+    "check": "backup_detection",
+    "status": "warning",
+    "issue": "Backup endpoints not detected"
+  },
+  {
+    "check": "robots_sensitive_paths",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "ssl_certificate_valid",
+    "status": "pass",
+    "issue": null
+  },
+  {
+    "check": "security_txt",
+    "status": "pass",
+    "issue": null
+  }
+]
