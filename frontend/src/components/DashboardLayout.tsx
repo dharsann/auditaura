@@ -1,5 +1,6 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Outlet } from "react-router-dom";
 
 export function DashboardLayout() {
@@ -8,11 +9,14 @@ export function DashboardLayout() {
       <div className="min-h-screen flex w-full">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-14 flex items-center border-b px-4 bg-card">
-            <SidebarTrigger className="mr-4" />
-            <span className="text-sm font-medium text-muted-foreground">
-              AI Compliance Agent
-            </span>
+          <header className="h-14 flex items-center justify-between border-b px-4 bg-card">
+            <div className="flex items-center">
+              <SidebarTrigger className="mr-4" />
+              <span className="text-sm font-medium text-muted-foreground">
+                AI Compliance Agent
+              </span>
+            </div>
+            <ThemeToggle />
           </header>
           <main className="flex-1 p-6 overflow-auto">
             <Outlet />
