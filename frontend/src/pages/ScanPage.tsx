@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { Loader2, Scan } from "lucide-react";
 import { runAudit, type AuditResponse } from "@/services/api";
+import { saveScan } from "@/lib/scanHistory";
 import { useToast } from "@/hooks/use-toast";
 
 const frameworks = [
@@ -32,6 +33,8 @@ export default function ScanPage() {
     setLoading(true);
     try {
       const data = await runAudit(url, framework);
+      // Save to history
+      saveScan(url, data);
       // Store results and navigate
       sessionStorage.setItem("auditResults", JSON.stringify(data));
       sessionStorage.setItem("auditUrl", url);

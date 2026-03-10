@@ -1,4 +1,4 @@
-import { LayoutDashboard, Scan, ShieldCheck, FileText, Shield } from "lucide-react";
+import { LayoutDashboard, Scan, ShieldCheck, FileText, Shield, History } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -19,6 +19,7 @@ const navItems = [
   { title: "Scan", url: "/scan", icon: Scan },
   { title: "Controls", url: "/controls", icon: ShieldCheck },
   { title: "Reports", url: "/reports", icon: FileText },
+  { title: "History", url: "/history", icon: History },
 ];
 
 export function AppSidebar() {
